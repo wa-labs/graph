@@ -37,7 +37,8 @@ func NewDirectedGraph(self, absent float64) *DirectedGraph {
 	}
 }
 
-// NewNodeID returns a new unique ID for a node to be added to g. The returned ID does
+// NewNodeID returns a new unique ID for a node to be added to g.
+// The returned ID does
 // not become a valid ID in g until it is added to g.
 func (g *DirectedGraph) NewNodeID() int {
 	if len(g.nodes) == 0 {
@@ -62,7 +63,8 @@ func (g *DirectedGraph) NewNodeID() int {
 	panic("unreachable")
 }
 
-// AddNode adds n to the graph. It panics if the added node ID matches an existing node ID.
+// AddNode adds n to the graph. It panics if the added node
+// ID matches an existing node ID.
 func (g *DirectedGraph) AddNode(n graph.Node) {
 	if _, exists := g.nodes[n.ID()]; exists {
 		panic(fmt.Sprintf("simple: node ID collision: %d", n.ID()))
@@ -75,8 +77,8 @@ func (g *DirectedGraph) AddNode(n graph.Node) {
 	g.usedIDs.Insert(n.ID())
 }
 
-// RemoveNode removes n from the graph, as well as any edges attached to it. If the node
-// is not in the graph it is a no-op.
+// RemoveNode removes n from the graph, as well as any edges
+// attached to it. If the node is not in the graph it is a no-op.
 func (g *DirectedGraph) RemoveNode(n graph.Node) {
 	if _, ok := g.nodes[n.ID()]; !ok {
 		return
@@ -97,8 +99,9 @@ func (g *DirectedGraph) RemoveNode(n graph.Node) {
 	g.usedIDs.Remove(n.ID())
 }
 
-// SetEdge adds e, an edge from one node to another. If the nodes do not exist, they are added.
-// It will panic if the IDs of the e.From and e.To are equal.
+// SetEdge adds e, an edge from one node to another. If the nodes do
+// not exist, they are added. It will panic if the IDs of the
+// e.From and e.To are equal.
 func (g *DirectedGraph) SetEdge(e graph.Edge) {
 	var (
 		from = e.From()
@@ -122,8 +125,8 @@ func (g *DirectedGraph) SetEdge(e graph.Edge) {
 	g.to[tid][fid] = e
 }
 
-// RemoveEdge removes e from the graph, leaving the terminal nodes. If the edge does not exist
-// it is a no-op.
+// RemoveEdge removes e from the graph, leaving the terminal nodes.
+// If the edge does not exist it is a no-op.
 func (g *DirectedGraph) RemoveEdge(e graph.Edge) {
 	from, to := e.From(), e.To()
 	if _, ok := g.nodes[from.ID()]; !ok {
@@ -252,10 +255,11 @@ func (g *DirectedGraph) HasEdgeFromTo(u, v graph.Node) bool {
 	return true
 }
 
-// Weight returns the weight for the edge between x and y if Edge(x, y) returns a non-nil Edge.
-// If x and y are the same node or there is no joining edge between the two nodes the weight
-// value returned is either the graph's absent or self value. Weight returns true if an edge
-// exists between x and y or if x and y have the same ID, false otherwise.
+// Weight returns the weight for the edge between x and y if Edge(x, y) returns
+// a non-nil Edge. If x and y are the same node or there is no joining edge
+// between the two nodes the weight value returned is either the graph's
+// absent or self value. Weight returns true if an edge exists between
+// x and y or if x and y have the same ID, false otherwise.
 func (g *DirectedGraph) Weight(x, y graph.Node) (w float64, ok bool) {
 	xid := x.ID()
 	yid := y.ID()
