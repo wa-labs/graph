@@ -8,7 +8,7 @@ import (
 	"math"
 	"testing"
 
-	"github.com/gonum/graph"
+	"github.com/wa-labs/graph"
 )
 
 var _ graph.Graph = (*UndirectedGraph)(nil)
@@ -41,7 +41,7 @@ func TestMaxID(t *testing.T) {
 	}
 }
 
-// Test for issue #123 https://github.com/gonum/graph/issues/123
+// Test for issue #123 https://github.com/wa-labs/graph/issues/123
 func TestIssue123UndirectedGraph(t *testing.T) {
 	defer func() {
 		if r := recover(); r != nil {

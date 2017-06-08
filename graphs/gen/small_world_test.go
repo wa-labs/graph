@@ -8,7 +8,7 @@ import (
 	"math"
 	"testing"
 
-	"github.com/gonum/graph/simple"
+	"github.com/wa-labs/graph/simple"
 )
 
 var smallWorldDimensionParameters = [][]int{

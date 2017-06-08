@@ -8,7 +8,7 @@ import (
 	"math"
 	"math/rand"
 
-	"github.com/gonum/graph"
+	"github.com/wa-labs/graph"
 	"github.com/gonum/matrix/mat64"
 )
 

@@ -7,7 +7,7 @@ package path
 import (
 	"math"
 
-	"github.com/gonum/graph"
+	"github.com/wa-labs/graph"
 )
 
 // Weighting is a mapping between a pair of nodes and a weight. It follows the

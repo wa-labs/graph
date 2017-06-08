@@ -7,8 +7,8 @@ package simple
 import (
 	"sort"
 
-	"github.com/gonum/graph"
-	"github.com/gonum/graph/internal/ordered"
+	"github.com/wa-labs/graph"
+	"github.com/wa-labs/graph/internal/ordered"
 	"github.com/gonum/matrix/mat64"
 )
 

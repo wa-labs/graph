@@ -9,7 +9,7 @@ import (
 
 	"golang.org/x/tools/container/intsets"
 
-	"github.com/gonum/graph"
+	"github.com/wa-labs/graph"
 )
 
 // DirectedGraph implements a generalized directed graph.

@@ -9,9 +9,9 @@ import (
 	"fmt"
 	"math"
 
-	"github.com/gonum/graph"
-	"github.com/gonum/graph/path"
-	"github.com/gonum/graph/simple"
+	"github.com/wa-labs/graph"
+	"github.com/wa-labs/graph/path"
+	"github.com/wa-labs/graph/simple"
 )
 
 // DStarLite implements the D* Lite dynamic re-planning path search algorithm.

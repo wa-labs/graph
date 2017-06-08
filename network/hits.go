@@ -8,7 +8,7 @@ import (
 	"math"
 
 	"github.com/gonum/floats"
-	"github.com/gonum/graph"
+	"github.com/wa-labs/graph"
 )
 
 // HubAuthority is a Hyperlink-Induced Topic Search hub-authority score pair.

@@ -15,10 +15,10 @@ import (
 	"fmt"
 	"sort"
 
-	"github.com/gonum/graph"
-	"github.com/gonum/graph/internal/ordered"
-	"github.com/gonum/graph/network"
-	"github.com/gonum/graph/simple"
+	"github.com/wa-labs/graph"
+	"github.com/wa-labs/graph/internal/ordered"
+	"github.com/wa-labs/graph/network"
+	"github.com/wa-labs/graph/simple"
 )
 
 // set is an integer set.

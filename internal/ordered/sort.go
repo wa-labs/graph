@@ -5,7 +5,7 @@
 // Package ordered provides common sort ordering types.
 package ordered
 
-import "github.com/gonum/graph"
+import "github.com/wa-labs/graph"
 
 // ByID implements the sort.Interface sorting a slice of graph.Node
 // by ID.

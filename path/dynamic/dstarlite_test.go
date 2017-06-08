@@ -13,11 +13,11 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/gonum/graph"
-	"github.com/gonum/graph/path"
-	"github.com/gonum/graph/path/internal"
-	"github.com/gonum/graph/path/internal/testgraphs"
-	"github.com/gonum/graph/simple"
+	"github.com/wa-labs/graph"
+	"github.com/wa-labs/graph/path"
+	"github.com/wa-labs/graph/path/internal"
+	"github.com/wa-labs/graph/path/internal/testgraphs"
+	"github.com/wa-labs/graph/simple"
 )
 
 var (

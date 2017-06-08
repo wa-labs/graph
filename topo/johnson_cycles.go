@@ -7,9 +7,9 @@ package topo
 import (
 	"sort"
 
-	"github.com/gonum/graph"
-	"github.com/gonum/graph/internal/ordered"
-	"github.com/gonum/graph/internal/set"
+	"github.com/wa-labs/graph"
+	"github.com/wa-labs/graph/internal/ordered"
+	"github.com/wa-labs/graph/internal/set"
 )
 
 // johnson implements Johnson's "Finding all the elementary

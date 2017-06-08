@@ -9,7 +9,7 @@ import (
 	"math/rand"
 
 	"github.com/gonum/floats"
-	"github.com/gonum/graph"
+	"github.com/wa-labs/graph"
 	"github.com/gonum/matrix/mat64"
 )
 

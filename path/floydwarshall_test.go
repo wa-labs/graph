@@ -10,9 +10,9 @@ import (
 	"sort"
 	"testing"
 
-	"github.com/gonum/graph"
-	"github.com/gonum/graph/internal/ordered"
-	"github.com/gonum/graph/path/internal/testgraphs"
+	"github.com/wa-labs/graph"
+	"github.com/wa-labs/graph/internal/ordered"
+	"github.com/wa-labs/graph/path/internal/testgraphs"
 )
 
 func TestFloydWarshall(t *testing.T) {

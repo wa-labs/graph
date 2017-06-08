@@ -13,8 +13,8 @@
 package parser
 
 import (
-	"github.com/gonum/graph/formats/dot/ast"
-	"github.com/gonum/graph/formats/dot/internal/astx"
+	"github.com/wa-labs/graph/formats/dot/ast"
+	"github.com/wa-labs/graph/formats/dot/internal/astx"
 )
 
 type (

@@ -12,8 +12,8 @@ import (
 	"math"
 	"math/rand"
 
-	"github.com/gonum/graph"
-	"github.com/gonum/graph/simple"
+	"github.com/wa-labs/graph"
+	"github.com/wa-labs/graph/simple"
 )
 
 // Gnp constructs a Gilbert’s model graph in the destination, dst, of order n. Edges

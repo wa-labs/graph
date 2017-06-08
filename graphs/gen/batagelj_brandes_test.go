@@ -8,8 +8,8 @@ import (
 	"math"
 	"testing"
 
-	"github.com/gonum/graph"
-	"github.com/gonum/graph/simple"
+	"github.com/wa-labs/graph"
+	"github.com/wa-labs/graph/simple"
 )
 
 type gnUndirected struct {

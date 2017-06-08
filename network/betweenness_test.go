@@ -11,8 +11,8 @@ import (
 	"testing"
 
 	"github.com/gonum/floats"
-	"github.com/gonum/graph/path"
-	"github.com/gonum/graph/simple"
+	"github.com/wa-labs/graph/path"
+	"github.com/wa-labs/graph/simple"
 )
 
 var betweennessTests = []struct {

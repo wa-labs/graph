@@ -3,13 +3,13 @@
 // license that can be found in the LICENSE file.
 
 // Package simple provides a suite of simple graph implementations satisfying
-// the gonum/graph interfaces.
+// the wa-labs/graph interfaces.
 package simple
 
 import (
 	"math"
 
-	"github.com/gonum/graph"
+	"github.com/wa-labs/graph"
 )
 
 // Node is a simple graph node.

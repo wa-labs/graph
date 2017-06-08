@@ -11,10 +11,10 @@ import (
 	"sort"
 	"testing"
 
-	"github.com/gonum/graph"
-	"github.com/gonum/graph/graphs/gen"
-	"github.com/gonum/graph/internal/ordered"
-	"github.com/gonum/graph/simple"
+	"github.com/wa-labs/graph"
+	"github.com/wa-labs/graph/graphs/gen"
+	"github.com/wa-labs/graph/internal/ordered"
+	"github.com/wa-labs/graph/simple"
 )
 
 var (

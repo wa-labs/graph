@@ -17,8 +17,8 @@ import (
 	"io/ioutil"
 	"unicode/utf8"
 
-	// "github.com/gonum/graph/formats/dot/internal/util"
-	"github.com/gonum/graph/formats/dot/internal/token"
+	// "github.com/wa-labs/graph/formats/dot/internal/util"
+	"github.com/wa-labs/graph/formats/dot/internal/token"
 )
 
 const (

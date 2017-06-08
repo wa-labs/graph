@@ -6,8 +6,8 @@
 package topo
 
 import (
-	"github.com/gonum/graph"
-	"github.com/gonum/graph/traverse"
+	"github.com/wa-labs/graph"
+	"github.com/wa-labs/graph/traverse"
 )
 
 // IsPathIn returns whether path is a path in g.

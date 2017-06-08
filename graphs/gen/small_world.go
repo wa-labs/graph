@@ -10,8 +10,8 @@ import (
 	"math"
 	"math/rand"
 
-	"github.com/gonum/graph"
-	"github.com/gonum/graph/simple"
+	"github.com/wa-labs/graph"
+	"github.com/wa-labs/graph/simple"
 	"github.com/gonum/stat/sampleuv"
 )
 

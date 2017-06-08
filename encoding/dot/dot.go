@@ -20,8 +20,8 @@ import (
 	"sort"
 	"strings"
 
-	"github.com/gonum/graph"
-	"github.com/gonum/graph/internal/ordered"
+	"github.com/wa-labs/graph"
+	"github.com/wa-labs/graph/internal/ordered"
 )
 
 // Node is a DOT graph node.
