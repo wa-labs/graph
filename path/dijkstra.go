@@ -71,61 +71,61 @@ func DijkstraFrom(u graph.Node, g graph.Graph) Shortest {
 // DijkstraAllPaths will panic if g has a negative edge weight.
 //
 // The time complexity of DijkstrAllPaths is O(|V|.|E|+|V|^2.log|V|).
-func DijkstraAllPaths(g graph.Graph) (paths AllShortest) {
-	paths = newAllShortest(g.Nodes(), false)
-	dijkstraAllPaths(g, paths)
-	return paths
-}
+// func DijkstraAllPaths(g graph.Graph) (paths AllShortest) {
+// 	paths = newAllShortest(g.Nodes(), false)
+// 	dijkstraAllPaths(g, paths)
+// 	return paths
+// }
 
 // dijkstraAllPaths is the all-paths implementation of Dijkstra. It is shared
 // between DijkstraAllPaths and JohnsonAllPaths to avoid repeated allocation
 // of the nodes slice and the indexOf map. It returns nothing, but stores the
 // result of the work in the paths parameter which is a reference type.
-func dijkstraAllPaths(g graph.Graph, paths AllShortest) {
-	var weight Weighting
-	if wg, ok := g.(graph.Weighter); ok {
-		weight = wg.Weight
-	} else {
-		weight = UniformCost(g)
-	}
+// func dijkstraAllPaths(g graph.Graph, paths AllShortest) {
+// 	var weight Weighting
+// 	if wg, ok := g.(graph.Weighter); ok {
+// 		weight = wg.Weight
+// 	} else {
+// 		weight = UniformCost(g)
+// 	}
 
-	var Q priorityQueue
-	for i, u := range paths.nodes {
-		// Dijkstra's algorithm here is implemented essentially as
-		// described in Function B.2 in figure 6 of UTCS Technical
-		// Report TR-07-54 with the addition of handling multiple
-		// co-equal paths.
-		//
-		// http://www.cs.utexas.edu/ftp/techreports/tr07-54.pdf
+// 	var Q priorityQueue
+// 	for i, u := range paths.nodes {
+// 		// Dijkstra's algorithm here is implemented essentially as
+// 		// described in Function B.2 in figure 6 of UTCS Technical
+// 		// Report TR-07-54 with the addition of handling multiple
+// 		// co-equal paths.
+// 		//
+// 		// http://www.cs.utexas.edu/ftp/techreports/tr07-54.pdf
 
-		// Q must be empty at this point.
-		heap.Push(&Q, distanceNode{node: u, dist: 0})
-		for Q.Len() != 0 {
-			mid := heap.Pop(&Q).(distanceNode)
-			k := paths.indexOf[mid.node.ID()]
-			if mid.dist < paths.dist.At(i, k) {
-				paths.dist.Set(i, k, mid.dist)
-			}
-			for _, v := range g.From(mid.node) {
-				j := paths.indexOf[v.ID()]
-				w, ok := weight(mid.node, v)
-				if !ok {
-					panic("dijkstra: unexpected invalid weight")
-				}
-				if w < 0 {
-					panic("dijkstra: negative edge weight")
-				}
-				joint := paths.dist.At(i, k) + w
-				if joint < paths.dist.At(i, j) {
-					heap.Push(&Q, distanceNode{node: v, dist: joint})
-					paths.set(i, j, joint, k)
-				} else if joint == paths.dist.At(i, j) {
-					paths.add(i, j, k)
-				}
-			}
-		}
-	}
-}
+// 		// Q must be empty at this point.
+// 		heap.Push(&Q, distanceNode{node: u, dist: 0})
+// 		for Q.Len() != 0 {
+// 			mid := heap.Pop(&Q).(distanceNode)
+// 			k := paths.indexOf[mid.node.ID()]
+// 			if mid.dist < paths.dist.At(i, k) {
+// 				paths.dist.Set(i, k, mid.dist)
+// 			}
+// 			for _, v := range g.From(mid.node) {
+// 				j := paths.indexOf[v.ID()]
+// 				w, ok := weight(mid.node, v)
+// 				if !ok {
+// 					panic("dijkstra: unexpected invalid weight")
+// 				}
+// 				if w < 0 {
+// 					panic("dijkstra: negative edge weight")
+// 				}
+// 				joint := paths.dist.At(i, k) + w
+// 				if joint < paths.dist.At(i, j) {
+// 					heap.Push(&Q, distanceNode{node: v, dist: joint})
+// 					paths.set(i, j, joint, k)
+// 				} else if joint == paths.dist.At(i, j) {
+// 					paths.add(i, j, k)
+// 				}
+// 			}
+// 		}
+// 	}
+// }
 
 type distanceNode struct {
 	node graph.Node
